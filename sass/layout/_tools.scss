@@ -4,9 +4,12 @@
   justify-content: space-between;
 
   padding: 4rem 8rem 4rem 0;
+  width: 98vw;
+  overflow: hidden;
 
   @include mediaQuery(tab-land) {
     padding: 4rem 6rem;
+    width: 100vw;
   }
 
   @include mediaQuery(tab-port) {
@@ -20,6 +23,11 @@
     @include mediaQuery(tab-port) {
       width: 100%;
       margin-bottom: 4rem;
+      padding: 6rem 8rem;
+    }
+
+    @include mediaQuery(phone) {
+      padding: 2rem 0;
     }
 
     & > img {

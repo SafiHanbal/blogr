@@ -5,16 +5,15 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/attribution";
 @import "components/buttons";
+@import "components/codetarget";
 
 @import "layout/footer";
 @import "layout/header";
 @import "layout/intro";
 @import "layout/navigation";
+@import "layout/state";
 @import "layout/tools";
 
 @import "page/index";
-
-.deleteit {
-  min-height: 5rem;
-}

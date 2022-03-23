@@ -1,0 +1,13 @@
+.attribution {
+  border-top: 1px solid rgba($color-white, 0.1);
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: $color-black-blue;
+  color: $color-white;
+  padding: 0.7rem 0.7rem;
+
+  &__link:link,
+  &__link:visited {
+    color: $color-primary;
+  }
+}

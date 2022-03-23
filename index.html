@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="sass/main.scss" />
 
     <!-- ! Script -->
-    <script defer src="js/indexController.js"></script>
+    <script defer type="module" src="js/indexController.js"></script>
   </head>
   <body>
     <header class="header">
@@ -175,20 +175,37 @@
         <picture class="intro__img">
           <source
             srcset="images/illustration-editor-mobile.svg"
-            media="(max-width: 37.5em)"
+            media="(max-width: 56.25em)"
           />
           <img src="images/illustration-editor-desktop.svg" alt="intro-img" />
         </picture>
       </div>
     </section>
 
-    <div class="deleteit"></div>
+    <section class="state">
+      <img
+        src="images/illustration-phones.svg"
+        alt="illustration phones"
+        class="state__img"
+      />
+      <div class="state__text">
+        <h2 class="heading-2 heading-2--white">
+          State of the Art Infrastructure
+        </h2>
+        <p class="paragraph paragraph--white">
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
+      </div>
+    </section>
 
     <section class="tools">
       <picture class="tools__img">
         <source
           srcset="images/illustration-laptop-mobile.svg"
-          media="(max-width: 37.5em)"
+          media="(max-width: 56.25em)"
         />
         <img src="images/illustration-laptop-desktop.svg" alt="" />
       </picture>
@@ -269,21 +286,29 @@
         </ul>
       </div>
     </footer>
-    <!--
-
-    State of the Art Infrastructure With reliability and speed in mind,
-    worldwide data centers provide the backbone for ultra-fast connectivity.
-    This ensures your site will load instantly, no matter where your readers
-    are, keeping your site competitive.
-
-
-     -->
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="attribution__link"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a href="#" target="_blank" class="attribution__link"
+        >Abuzar Ansari (Safi Hanbal)</a
+      >.
+    </div>
+    <div class="code-target">
+      <p class="code-target__paragraph">
+        Want to see the code.
+        <a
+          href="https://github.com/SafiHanbal/blogr"
+          target="_blank"
+          class="code-target__btn"
+          >Click Here</a
+        >
+      </p>
     </div>
   </body>
 </html>

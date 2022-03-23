@@ -1,0 +1,31 @@
+.code-target {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  background-color: $color-gray-light;
+  border-top: 1px solid $color-grayish-blue;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+
+  &__paragraph {
+    font-size: 1.8rem;
+  }
+
+  &__btn:link,
+  &__btn:visited {
+    text-decoration: none;
+    color: $color-white;
+    background-image: linear-gradient(
+      to right,
+      $color-red-light-1,
+      $color-red-light-2
+    );
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0.3rem 1.3rem 0.2rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba($color-grayish-blue-dark, 0.4);
+  }
+}

@@ -11,8 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2",
-    "parcel": "^2.3.2",
-    "parcel-plugin-watch-reload": "^1.0.3"
+    "parcel": "^2.3.2"
   },
   "dependencies": {
     "core-js": "^3.21.1",
