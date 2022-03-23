@@ -1,0 +1,39 @@
+.cta {
+  margin-top: 3rem;
+  text-align: center;
+
+  &__btn {
+    text-decoration: none;
+    display: inline-block;
+    width: 13rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 0.7rem 0 0.3rem;
+    border-radius: 4rem;
+
+    &--fill {
+      color: $color-red-light-2;
+      background-color: $color-white;
+      border: 1px solid $color-white;
+      margin-right: 2rem;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: $color-white;
+        background-color: rgba($color-white, 0.3);
+        border: 1px solid rgba($color-white, 0.1);
+      }
+    }
+
+    &--border {
+      color: $color-white;
+      border: 1px solid $color-white;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: $color-red-light-2;
+        background-color: $color-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 4rem 8rem 4rem 0;
+
+  @include mediaQuery(tab-land) {
+    padding: 4rem 6rem;
+  }
+
+  @include mediaQuery(tab-port) {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  &__img {
+    width: 55%;
+
+    @include mediaQuery(tab-port) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    & > img {
+      width: 100%;
+      @include mediaQuery(tab-port) {
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  &__text {
+    width: 40%;
+
+    @include mediaQuery(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

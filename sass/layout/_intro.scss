@@ -1,0 +1,38 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: -6rem;
+
+  @include mediaQuery(tab-port) {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  &__img {
+    width: 55%;
+
+    @include mediaQuery(tab-port) {
+      width: 100%;
+      margin-bottom: 4rem;
+      margin-top: 6rem;
+    }
+
+    & > img {
+      width: 100%;
+      @include mediaQuery(tab-port) {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__text {
+    width: 40%;
+
+    @include mediaQuery(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

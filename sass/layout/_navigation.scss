@@ -1,0 +1,249 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  &__logo {
+    height: 4rem;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+
+    @include mediaQuery(phone) {
+      display: none;
+    }
+
+    &--active {
+      display: block;
+      position: absolute;
+      top: 6rem;
+
+      background-color: $color-white;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1rem 2rem rgba($color-grayish-blue-dark, 0.5);
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mediaQuery(phone) {
+      display: block;
+      border-bottom: 1px solid rgba($color-grayish-blue-dark, 0.3);
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    @include mediaQuery(phone) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 500;
+    font-family: $font-secondary;
+
+    @include mediaQuery(phone) {
+      display: block;
+      text-align: center;
+      padding: 1.2rem;
+      color: $color-grayish-blue-dark;
+    }
+  }
+
+  &__icon {
+    padding-left: 0.5rem;
+    transition: all 0.2s;
+
+    & > img {
+      transition: all 0.2s;
+    }
+
+    &--active {
+      & > img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+
+    &--active {
+      display: block;
+      list-style: none;
+      position: absolute;
+      top: 4rem;
+      left: -2rem;
+
+      background-color: $color-white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1rem 2rem rgba($color-grayish-blue-dark, 0.15);
+      min-width: 15rem;
+
+      @include mediaQuery(phone) {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        box-shadow: none;
+        background-color: rgba($color-grayish-blue, 0.5);
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-grayish-blue-dark;
+      font-weight: 400;
+      font-family: $font-secondary;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        font-weight: 500;
+      }
+
+      @include mediaQuery(phone) {
+        display: block;
+        padding: 1rem 0;
+        text-align: center;
+
+        &:hover {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &__entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mediaQuery(phone) {
+      flex-direction: column;
+
+      & > * {
+        margin-top: 1rem;
+      }
+    }
+
+    &__login {
+      text-decoration: none;
+      color: $color-white;
+      font-weight: 500;
+      font-family: $font-secondary;
+      margin-right: 2rem;
+
+      @include mediaQuery(phone) {
+        color: $color-grayish-blue-dark;
+        margin-right: 0;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+      }
+    }
+
+    &__signup {
+      text-decoration: none;
+      color: $color-red-light-2;
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: $font-secondary;
+      background-color: $color-white;
+      padding: 0.5rem 2rem;
+      border-radius: 2rem;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: $color-white;
+        background-color: rgba($color-white, 0.4);
+      }
+
+      @include mediaQuery(phone) {
+        background-image: linear-gradient(
+          to right,
+          $color-red-light-1,
+          $color-red-light-2
+        );
+        color: $color-white;
+        font-size: 1.6rem;
+        padding: 1rem 3rem;
+        border-radius: 4rem;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include mediaQuery(phone) {
+      position: relative;
+      display: block;
+      @include navigationMenu;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 0;
+        transition: all 0.2s ease-out;
+
+        @include navigationMenu;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        transition: all 0.2s ease-out;
+
+        @include navigationMenu;
+      }
+    }
+
+    &--active {
+      display: none;
+
+      @include mediaQuery(phone) {
+        display: block;
+        visibility: hidden;
+
+        &::before {
+          visibility: visible;
+          top: 0;
+          transform: rotate(135deg);
+        }
+
+        &::after {
+          visibility: visible;
+          top: 0;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}

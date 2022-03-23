@@ -1,0 +1,7 @@
+#ignoring node modules, .cache, .parcel-cache, dist
+node_modules
+.cache
+.parcel-cache
+dist
+
+style-guide.md

@@ -1,0 +1,27 @@
+.header {
+  background-image: url("./../images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(to right, $color-red-light-1, $color-red-light-2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 0 10rem;
+
+  padding: 4rem 8rem;
+  min-height: 80vh;
+
+  @include mediaQuery(tab-land) {
+    padding: 4rem 6rem;
+  }
+
+  @include mediaQuery(tab-port) {
+    padding: 4rem;
+  }
+
+  @include mediaQuery(phone) {
+    background-image: url("./../images/bg-pattern-intro-mobile.svg"),
+      linear-gradient(to right, $color-red-light-1, $color-red-light-2);
+    background-size: auto;
+
+    padding: 3rem 1.5rem;
+  }
+}

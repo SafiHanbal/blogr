@@ -1,0 +1,60 @@
+.footer {
+  background-color: $color-black-blue;
+  padding: 6rem 8rem 6rem 12rem;
+  border-radius: 0 10rem 0 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & > * {
+    width: 24%;
+  }
+
+  @include mediaQuery(tab-land) {
+    padding: 4rem 6rem;
+  }
+
+  @include mediaQuery(tab-port) {
+    padding: 4rem 4rem;
+  }
+
+  @include mediaQuery(phone) {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__logo {
+    @include mediaQuery(phone) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    padding: 1rem 0;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include mediaQuery(phone) {
+      text-align: center;
+    }
+  }
+}

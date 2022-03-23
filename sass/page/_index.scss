@@ -1,0 +1,11 @@
+.section-intro {
+  padding: 6rem 8rem;
+
+  @include mediaQuery(tab-land) {
+    padding: 4rem 0 4rem 6rem;
+  }
+
+  @include mediaQuery(tab-port) {
+    padding: 4rem;
+  }
+}
